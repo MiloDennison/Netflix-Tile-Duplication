@@ -1,0 +1,98 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    width: 100%;
+    margin: 0; 
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 12px;
+    overflow: hidden;
+}
+
+body{
+    margin: inherit;
+    position: relative;
+}
+
+.tile_container{
+    height: 425px;
+    margin: 10% 0;
+    overflow: hidden;
+    background-color: gray;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 20em 20em 20em 20em;
+    grid-template-rows: 20em 20em 20em 20em 20em 20em 20em;
+    gap: 5em 2.5em;
+    grid-template-areas: 
+    ". one . two"
+    "three one four two"
+    "three five four six"
+    "seven five eight six"
+    "seven nine eight ten"
+    ". nine eleven ten";
+    transform: rotatex(-72deg) skewX(-18deg) translate3d(-275px, -200px, -775px);
+}
+
+.tile{
+    box-shadow: 20px 100px 20px rgba(0, 0, 0, .3);
+}
+
+#tile1 {
+    grid-area: one;
+    z-index: 2;
+}
+
+#tile2 {
+    grid-area: two;
+    z-index: 4;
+}
+
+#tile3 {
+    grid-area: three;
+    z-index: 1;
+}
+
+#tile4 {
+    grid-area: four;
+    z-index: 3;
+}
+
+#tile5 {
+    grid-area: five;
+    z-index: 2;
+}
+
+#tile6 {
+    grid-area: six;
+    z-index: 4;
+}
+
+#tile7 {
+    grid-area: seven;
+    z-index: 1;
+}
+
+#tile8 {
+    grid-area: eight;
+    z-index: 3;
+}
+
+#tile9 {
+    grid-area: nine;
+    z-index: 2;
+}
+
+#tile10 {
+    grid-area: ten;
+    z-index: 4;
+}
+
+#tile11 {
+    grid-area: eleven;
+    z-index: 3;
+}
